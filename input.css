@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//if you want to set your own default styles for elements use the @layer//
+//@apply allows you to use tailwind's properties in setting your defaults//
+@layer base {
+    html {
+       @apply bg-slate-500;
+    }
+
+h1 {
+    @apply text-3xl
+}
+
+h2{
+    @apply text-1xl
+}
+
+}
+
+//you can also set for components that you want to have  a uniform style//
+@layer components {
+.card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+}
+}
